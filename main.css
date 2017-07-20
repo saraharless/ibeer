@@ -30,12 +30,10 @@ img{
     display: block;
 }
 .wrapper{
+    width: 1000px;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     position: relative;
-    top: 50px;
-    left: 50px;
-
     /*
         TODO:
         - Center up the page
@@ -127,6 +125,8 @@ main{
     flex-direction: column;
     width: 600px;
     position: relative;
+    top: -50px;
+    left: 35px;
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
@@ -142,6 +142,9 @@ aside{
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
     position: relative;
+    top: -50px;
+    left: 35px;
+    width: 200px;
     /*
         TODO:
         - Flexbox: Set the starting width of this element
@@ -182,6 +185,8 @@ article time{
     color: #666;
 }
 article img{
+  width: 220px;
+  float: right;
     /*
         TODO:
         - Float article images to the right
@@ -189,6 +194,12 @@ article img{
     */
 }
 article footer p{
+  font-size: 0.5 em;
+  text-align: center;
+  margin: 40px 0 10px 0;
+  padding: 0 0 10px 0;
+  border-top: 1px solid #ccc;
+
     /*
         TODO:
         - Style the article footer
@@ -198,6 +209,11 @@ article footer p{
 #site-footer{
 
     background: #333;
+    text-align: center;
+    display: block;
+    background: #444;
+    color: white;
+    padding: 10px 20px;
     /*
         TODO:
         - Style the site footer
