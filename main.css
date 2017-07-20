@@ -16,9 +16,8 @@ body{
     line-height: 1.8;
     margin: 0;
     background-color: #eeebda;
-    width: 1000px;
-
 }
+
 h1, h2, h3{
     font-family: "Josefin Sans", sans-serif;
     margin-top: 0;
@@ -32,8 +31,9 @@ img{
 .wrapper{
     width: 1000px;
     display: flex;
-    flex-flow: row wrap;
-    position: relative;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
     /*
         TODO:
         - Center up the page
@@ -42,16 +42,13 @@ img{
     */
 }
 #site-header{
-  display: flex;
-  position: relative;
-  flex-direction: column;
+  flex-basis: 100%;
     /*
         TODO
         - Flexbox property here
     */
 }
 #site-header div{
-    width: 1000px;
     text-align: center;
     padding: 60px 0 120px 0;
     font-size: 4em;
@@ -90,8 +87,6 @@ img{
 #main-navigation{
     display: flex;
     background: #444;
-    flex-grow: 1;
-    flex-direction: row;
 
     /*
         TODO:
@@ -121,12 +116,9 @@ img{
     */
 }
 main{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
+    flex-basis: 50%;
     position: relative;
     top: -50px;
-    left: 35px;
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
@@ -143,8 +135,7 @@ aside{
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
     position: relative;
     top: -50px;
-    left: 35px;
-    width: 200px;
+    flex-basis: 25%;
     /*
         TODO:
         - Flexbox: Set the starting width of this element
@@ -185,7 +176,8 @@ article time{
     color: #666;
 }
 article img{
-  width: 220px;
+  width: 200px;
+  height: 200px;
   float: right;
     /*
         TODO:
@@ -194,10 +186,10 @@ article img{
     */
 }
 article footer p{
+  display: block;
   font-size: 0.5 em;
   text-align: center;
-  margin: 40px 0 10px 0;
-  padding: 0 0 10px 0;
+  padding: 10px 0 10px 0;
   border-top: 1px solid #ccc;
 
     /*
